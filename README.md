@@ -11,3 +11,6 @@ September 2, 2022 In-class Activity:
 
 September 7, 2022 User Testing:
 [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/EYQx9095F3BAlezO61IOOnIBhirwCMokMgiic14m3nv5fA?e=iIsPf0)
+
+September 12, 2022 Prototype Issues and Feedback:
+[Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/ET7O26C2NT9Kov51fXzyn3YB8hAUyGwvGPR2zuwvvSXm8A?e=IioJLy)
