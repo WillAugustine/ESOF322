@@ -14,3 +14,6 @@ September 7, 2022 User Testing:
 
 September 12, 2022 Prototype Issues and Feedback:
 [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/ET7O26C2NT9Kov51fXzyn3YB8hAUyGwvGPR2zuwvvSXm8A?e=IioJLy)
+
+September 14, 2022 Software Specification:
+[Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/ESNdhQ5pM_tOmWcBIkgvuPMBEWXNQ4l8LNPNDZj-Cyaryg?e=raK1dz)
