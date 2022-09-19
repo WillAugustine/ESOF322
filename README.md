@@ -1,4 +1,6 @@
-# ESOF322_lo-fi_prototype
+# ESOF322
+
+## Low-Fi Protype
 
 Lo-Fi Prototype:
 [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/wfranzen_mtech_edu/EestylKVv4RGhaC_2kUzOYIBU-CSrv1XOUH8ljxJrU9H9g?e=kZzux4)
@@ -17,3 +19,8 @@ September 12, 2022 Prototype Issues and Feedback:
 
 September 14, 2022 Software Specification:
 [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/ESNdhQ5pM_tOmWcBIkgvuPMBEWXNQ4l8LNPNDZj-Cyaryg?e=raK1dz)
+
+## Website Selling Art
+
+September 19, 2022 - Project Notes:
+[Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/ERwEeo4Uv_pPlKjVuE4yprkB6T8hb-VNBRJbg0qr54vSJQ?e=QcxUFQ)
