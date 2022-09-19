@@ -24,3 +24,6 @@ September 14, 2022 Software Specification:
 
 September 19, 2022 - Project Notes:
 [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/ERwEeo4Uv_pPlKjVuE4yprkB6T8hb-VNBRJbg0qr54vSJQ?e=QcxUFQ)
+
+Software Specifications:
+[Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/EQDQ4Vky0KZJiolkAIEhJHwB4yP5x1W7WO7CFK18shGDAw?e=oZlw6C)
