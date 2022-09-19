@@ -1,4 +1,4 @@
-# ESOF322
+# ESOF322 - Software Engineering
 
 ## Low-Fi Protype
 
