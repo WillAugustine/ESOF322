@@ -27,3 +27,6 @@ September 19, 2022 - Project Notes:
 
 Software Specifications:
 [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/EQDQ4Vky0KZJiolkAIEhJHwB4yP5x1W7WO7CFK18shGDAw?e=oZlw6C)
+
+September 21, 2022 - Prototype Art Searching/Buying:
+[Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/ER2rfLO_gURNtTtG_rs4pCMBzkzFRIEtKHDQ1V7PhALa8g?e=j6cOHZ)
