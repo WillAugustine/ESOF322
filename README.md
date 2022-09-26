@@ -31,5 +31,5 @@ Software Specifications:
 September 21, 2022 - Prototype Art Searching/Buying:
 [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/ER2rfLO_gURNtTtG_rs4pCMBzkzFRIEtKHDQ1V7PhALa8g?e=j6cOHZ)
 
-&nbsp; &nbsp; Photos: [OneDrive Folder](https://montanatech-my.sharepoint.com/:f:/g/personal/waugustine_mtech_edu/EkrA3sJ6r-RNh7ix0k_uL2QBIim5_HHlknh5i1znLVpzRw?e=UVmWde)
+&nbsp; &nbsp; Photos: [OneDrive Folder Link](https://montanatech-my.sharepoint.com/:f:/g/personal/waugustine_mtech_edu/EkrA3sJ6r-RNh7ix0k_uL2QBIim5_HHlknh5i1znLVpzRw?e=UVmWde)
 
