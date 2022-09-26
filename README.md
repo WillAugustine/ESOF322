@@ -1,6 +1,6 @@
 # ESOF322 - Software Engineering
 
-## Low-Fi Protype
+## Inmates Reading to Children
 
 Lo-Fi Prototype:
 [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/wfranzen_mtech_edu/EestylKVv4RGhaC_2kUzOYIBU-CSrv1XOUH8ljxJrU9H9g?e=kZzux4)
