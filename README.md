@@ -33,3 +33,5 @@ September 21, 2022 - Prototype Art Searching/Buying:
 
 &nbsp; &nbsp; Photos: [OneDrive Folder Link](https://montanatech-my.sharepoint.com/:f:/g/personal/waugustine_mtech_edu/EkrA3sJ6r-RNh7ix0k_uL2QBIim5_HHlknh5i1znLVpzRw?e=UVmWde)
 
+September 28, 2022 - Data Models:
+[Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/Ec_3SdWVISdFpKu5qe_FD8UBtRogw989PpQYF86iTicsnA?e=bUlKk4)
