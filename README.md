@@ -35,3 +35,8 @@ September 21, 2022 - Prototype Art Searching/Buying:
 
 September 28, 2022 - Data Models:
 [Excel File Link](https://montanatech-my.sharepoint.com/:x:/g/personal/waugustine_mtech_edu/EcGejpX_jNNPkyVmodQ7q5sBRJ1jULnrUzSzS3ipI6lYeg?e=UAxW44)
+
+## Other
+
+October 5, 2022 - Sequence Diagram:
+[Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/EdGIqemi-fZOsw4MK9svr_4B1ynj2cWSUSA8N7ITtUm5PQ?e=QIcIGs)
