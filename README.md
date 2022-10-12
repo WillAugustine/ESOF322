@@ -47,6 +47,14 @@ Project Management Software:
 
 &nbsp; &nbsp; - Discord Bot: [Discord API](https://discord.com/developers/docs/reference)
 
+&nbsp; &nbsp; - Interesting APIs:
+
+&nbsp; &nbsp; &nbsp; &nbsp; - [BrainShop.AI](https://rapidapi.com/blog/most-popular-api/#brainshopai)
+
+&nbsp; &nbsp; &nbsp; &nbsp; - [Utelly](https://rapidapi.com/blog/most-popular-api/#utelly)
+
+&nbsp; &nbsp; &nbsp; &nbsp; - [NASA](https://rapidapi.com/blog/most-popular-api/#nasaapi)
+
 ## Other
 
 October 5, 2022 - Sequence Diagram:
