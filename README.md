@@ -41,6 +41,12 @@ September 28, 2022 - Data Models:
 Project Management Software:
 [Jira](https://project-esof322.atlassian.net/jira/software/projects/FP/boards/1)
 
+#### Ideas:
+
+&nbsp; &nbsp; - Payroll / Timecard Tracking
+
+&nbsp; &nbsp; - Discord Bot: [Discord API](https://discord.com/developers/docs/reference)
+
 ## Other
 
 October 5, 2022 - Sequence Diagram:
