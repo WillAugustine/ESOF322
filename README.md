@@ -55,6 +55,8 @@ Project Management Software:
 
 &nbsp; &nbsp; &nbsp; &nbsp; - [NASA](https://rapidapi.com/blog/most-popular-api/#nasaapi)
 
+&nbsp; &nbsp; &nbsp; &nbsp; - [MusixMatch](https://rapidapi.com/blog/most-popular-api/#musixmatch)
+
 ## Other
 
 October 5, 2022 - Sequence Diagram:
