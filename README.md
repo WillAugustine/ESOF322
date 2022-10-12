@@ -59,6 +59,8 @@ Project Management Software:
 
 &nbsp; &nbsp; &nbsp; &nbsp; - [webcams.travel](https://rapidapi.com/blog/most-popular-api/#webcamstravel)
 
+&nbsp; &nbsp; &nbsp; &nbsp; - [Crime Data](https://rapidapi.com/blog/most-popular-api/#crime-data)
+
 ## Other
 
 October 5, 2022 - Sequence Diagram:
