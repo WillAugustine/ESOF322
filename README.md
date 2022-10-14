@@ -48,7 +48,8 @@ Project Management Software:
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Python): [Link](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)\
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Python): [Link](https://replicate.com/docs/get-started/discord-bot)\
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Node.js): [Link](https://www.toptal.com/chatbot/how-to-make-a-discord-bot)\
-&nbsp; &nbsp; &nbsp; &nbsp; - Example (JavaScript): [Link](https://www.xda-developers.com/how-to-create-discord-bot/)
+&nbsp; &nbsp; &nbsp; &nbsp; - Example (JavaScript): [Link](https://www.xda-developers.com/how-to-create-discord-bot/)\
+&nbsp; &nbsp; - Code: [Folder Link](DiscordBotCode)
 
 ~~&nbsp; &nbsp; - Interesting APIs:\
 &nbsp; &nbsp; &nbsp; &nbsp; - [BrainShop.AI](https://rapidapi.com/blog/most-popular-api/#brainshopai)\
