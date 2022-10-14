@@ -45,6 +45,9 @@ Project Management Software:
 ~~&nbsp; &nbsp; - Payroll / Timecard Tracking~~
 
 &nbsp; &nbsp; - Discord Bot: [Discord API](https://discord.com/developers/docs/reference)\
+
+https://discord.gg/VWZ2BBW2Ha
+
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Python): [Link](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)\
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Python): [Link](https://replicate.com/docs/get-started/discord-bot)\
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Node.js): [Link](https://www.toptal.com/chatbot/how-to-make-a-discord-bot)\
