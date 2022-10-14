@@ -46,7 +46,7 @@ Project Management Software:
 
 &nbsp; &nbsp; - Discord Bot: [Discord API](https://discord.com/developers/docs/reference)\
 
-https://discord.gg/VWZ2BBW2Ha
+&nbsp; &nbsp; - Discord Server: [Link](https://discord.gg/VWZ2BBW2Ha)
 
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Python): [Link](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)\
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Python): [Link](https://replicate.com/docs/get-started/discord-bot)\
