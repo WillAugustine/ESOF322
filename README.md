@@ -49,8 +49,8 @@ Project Management Software:
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Python): [Link](https://replicate.com/docs/get-started/discord-bot)\
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Node.js): [Link](https://www.toptal.com/chatbot/how-to-make-a-discord-bot)\
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (JavaScript): [Link](https://www.xda-developers.com/how-to-create-discord-bot/)\
-&nbsp; &nbsp; - Code: [Folder Link](DiscordBotCode)
-&nbsp; nbsp; - LiveShare: [Invite Link](https://prod.liveshare.vsengsaas.visualstudio.com/join?072FF05C9B59DEDED454EAF9360BB99CDB9A)
+&nbsp; &nbsp; - Code: [Folder Link](DiscordBotCode)\
+&nbsp; &nbsp; - LiveShare: [Invite Link](https://prod.liveshare.vsengsaas.visualstudio.com/join?072FF05C9B59DEDED454EAF9360BB99CDB9A)
 
 ~~&nbsp; &nbsp; - Interesting APIs:\
 &nbsp; &nbsp; &nbsp; &nbsp; - [BrainShop.AI](https://rapidapi.com/blog/most-popular-api/#brainshopai)\
