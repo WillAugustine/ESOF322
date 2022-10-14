@@ -35,33 +35,22 @@ September 21, 2022 - Prototype Art Searching/Buying:
 September 28, 2022 - Data Models:
 [Excel File Link](https://montanatech-my.sharepoint.com/:x:/g/personal/waugustine_mtech_edu/EcGejpX_jNNPkyVmodQ7q5sBRJ1jULnrUzSzS3ipI6lYeg?e=UAxW44)
 
-## Final Project
+## Final Project (Discord Bot)
 
 Project Management Software:
 [Jira](https://project-esof322.atlassian.net/jira/software/projects/FP/boards/1)
 
-#### Ideas:
+Discord API: [Discord API](https://discord.com/developers/docs/reference)
 
-~~&nbsp; &nbsp; - Payroll / Timecard Tracking~~
+Discord Server: [Link](https://discord.gg/VWZ2BBW2Ha)
 
-&nbsp; &nbsp; - Discord Bot: [Discord API](https://discord.com/developers/docs/reference)\
+### Examples:
+&nbsp; &nbsp; - Python: [Link](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)\
+&nbsp; &nbsp; - Python: [Link](https://replicate.com/docs/get-started/discord-bot)
 
-&nbsp; &nbsp; - Discord Server: [Link](https://discord.gg/VWZ2BBW2Ha)
-
-&nbsp; &nbsp; &nbsp; &nbsp; - Example (Python): [Link](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)\
-&nbsp; &nbsp; &nbsp; &nbsp; - Example (Python): [Link](https://replicate.com/docs/get-started/discord-bot)\
-&nbsp; &nbsp; &nbsp; &nbsp; - Example (Node.js): [Link](https://www.toptal.com/chatbot/how-to-make-a-discord-bot)\
-&nbsp; &nbsp; &nbsp; &nbsp; - Example (JavaScript): [Link](https://www.xda-developers.com/how-to-create-discord-bot/)\
-&nbsp; &nbsp; - Code: [Folder Link](DiscordBotCode)\
+### Code:
+&nbsp; &nbsp; - Directory: [Folder Link](DiscordBotCode)\
 &nbsp; &nbsp; - LiveShare: [Invite Link](https://prod.liveshare.vsengsaas.visualstudio.com/join?072FF05C9B59DEDED454EAF9360BB99CDB9A)
-
-~~&nbsp; &nbsp; - Interesting APIs:\
-&nbsp; &nbsp; &nbsp; &nbsp; - [BrainShop.AI](https://rapidapi.com/blog/most-popular-api/#brainshopai)\
-&nbsp; &nbsp; &nbsp; &nbsp; - [Utelly](https://rapidapi.com/blog/most-popular-api/#utelly)\
-&nbsp; &nbsp; &nbsp; &nbsp; - [NASA](https://rapidapi.com/blog/most-popular-api/#nasaapi)\
-&nbsp; &nbsp; &nbsp; &nbsp; - [MusixMatch](https://rapidapi.com/blog/most-popular-api/#musixmatch)\
-&nbsp; &nbsp; &nbsp; &nbsp; - [webcams.travel](https://rapidapi.com/blog/most-popular-api/#webcamstravel)\
-&nbsp; &nbsp; &nbsp; &nbsp; - [Crime Data](https://rapidapi.com/blog/most-popular-api/#crime-data)~~
 
 ## Other
 
