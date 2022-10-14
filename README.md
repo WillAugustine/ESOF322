@@ -29,8 +29,7 @@ Software Specifications:
 [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/EQDQ4Vky0KZJiolkAIEhJHwB4yP5x1W7WO7CFK18shGDAw?e=oZlw6C)
 
 September 21, 2022 - Prototype Art Searching/Buying:
-[Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/ER2rfLO_gURNtTtG_rs4pCMBzkzFRIEtKHDQ1V7PhALa8g?e=j6cOHZ)
-
+[Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/ER2rfLO_gURNtTtG_rs4pCMBzkzFRIEtKHDQ1V7PhALa8g?e=j6cOHZ)\
 &nbsp; &nbsp; Photos: [OneDrive Folder Link](https://montanatech-my.sharepoint.com/:f:/g/personal/waugustine_mtech_edu/EkrA3sJ6r-RNh7ix0k_uL2QBIim5_HHlknh5i1znLVpzRw?e=UVmWde)
 
 September 28, 2022 - Data Models:
@@ -45,20 +44,15 @@ Project Management Software:
 
 &nbsp; &nbsp; - Payroll / Timecard Tracking
 
-&nbsp; &nbsp; - Discord Bot: [Discord API](https://discord.com/developers/docs/reference)
+&nbsp; &nbsp; - Discord Bot: [Discord API](https://discord.com/developers/docs/reference)\
+&nbsp; &nbsp; - Discord Bot Example: [Link](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)
 
-&nbsp; &nbsp; - Interesting APIs:
-
-&nbsp; &nbsp; &nbsp; &nbsp; - [BrainShop.AI](https://rapidapi.com/blog/most-popular-api/#brainshopai)
-
-&nbsp; &nbsp; &nbsp; &nbsp; - [Utelly](https://rapidapi.com/blog/most-popular-api/#utelly)
-
-&nbsp; &nbsp; &nbsp; &nbsp; - [NASA](https://rapidapi.com/blog/most-popular-api/#nasaapi)
-
-&nbsp; &nbsp; &nbsp; &nbsp; - [MusixMatch](https://rapidapi.com/blog/most-popular-api/#musixmatch)
-
-&nbsp; &nbsp; &nbsp; &nbsp; - [webcams.travel](https://rapidapi.com/blog/most-popular-api/#webcamstravel)
-
+&nbsp; &nbsp; - Interesting APIs:\
+&nbsp; &nbsp; &nbsp; &nbsp; - [BrainShop.AI](https://rapidapi.com/blog/most-popular-api/#brainshopai)\
+&nbsp; &nbsp; &nbsp; &nbsp; - [Utelly](https://rapidapi.com/blog/most-popular-api/#utelly)\
+&nbsp; &nbsp; &nbsp; &nbsp; - [NASA](https://rapidapi.com/blog/most-popular-api/#nasaapi)\
+&nbsp; &nbsp; &nbsp; &nbsp; - [MusixMatch](https://rapidapi.com/blog/most-popular-api/#musixmatch)\
+&nbsp; &nbsp; &nbsp; &nbsp; - [webcams.travel](https://rapidapi.com/blog/most-popular-api/#webcamstravel)\
 &nbsp; &nbsp; &nbsp; &nbsp; - [Crime Data](https://rapidapi.com/blog/most-popular-api/#crime-data)
 
 ## Other
