@@ -42,7 +42,7 @@ Project Management Software:
 
 #### Ideas:
 
-&nbsp; &nbsp; - Payroll / Timecard Tracking
+~~&nbsp; &nbsp; - Payroll / Timecard Tracking~~
 
 &nbsp; &nbsp; - Discord Bot: [Discord API](https://discord.com/developers/docs/reference)\
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Python): [Link](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)\
@@ -50,13 +50,13 @@ Project Management Software:
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Node.js): [Link](https://www.toptal.com/chatbot/how-to-make-a-discord-bot)\
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (JavaScript): [Link](https://www.xda-developers.com/how-to-create-discord-bot/)
 
-&nbsp; &nbsp; - Interesting APIs:\
+~~&nbsp; &nbsp; - Interesting APIs:\
 &nbsp; &nbsp; &nbsp; &nbsp; - [BrainShop.AI](https://rapidapi.com/blog/most-popular-api/#brainshopai)\
 &nbsp; &nbsp; &nbsp; &nbsp; - [Utelly](https://rapidapi.com/blog/most-popular-api/#utelly)\
 &nbsp; &nbsp; &nbsp; &nbsp; - [NASA](https://rapidapi.com/blog/most-popular-api/#nasaapi)\
 &nbsp; &nbsp; &nbsp; &nbsp; - [MusixMatch](https://rapidapi.com/blog/most-popular-api/#musixmatch)\
 &nbsp; &nbsp; &nbsp; &nbsp; - [webcams.travel](https://rapidapi.com/blog/most-popular-api/#webcamstravel)\
-&nbsp; &nbsp; &nbsp; &nbsp; - [Crime Data](https://rapidapi.com/blog/most-popular-api/#crime-data)
+&nbsp; &nbsp; &nbsp; &nbsp; - [Crime Data](https://rapidapi.com/blog/most-popular-api/#crime-data)~~
 
 ## Other
 
