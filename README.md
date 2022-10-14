@@ -46,6 +46,7 @@ Project Management Software:
 
 &nbsp; &nbsp; - Discord Bot: [Discord API](https://discord.com/developers/docs/reference)\
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Python): [Link](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)\
+&nbsp; &nbsp; &nbsp; &nbsp; - Example (Python): [Link](https://replicate.com/docs/get-started/discord-bot)\
 &nbsp; &nbsp; &nbsp; &nbsp; - Example (Node.js): [Link](https://www.toptal.com/chatbot/how-to-make-a-discord-bot)
 
 &nbsp; &nbsp; - Interesting APIs:\
