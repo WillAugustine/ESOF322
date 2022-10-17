@@ -51,7 +51,8 @@ Discord Developer Portal: [Link](https://discord.com/developers/teams/1029794312
 
 ### Examples:
 &nbsp; &nbsp; - Python: [Link](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)\
-&nbsp; &nbsp; - Python: [Link](https://replicate.com/docs/get-started/discord-bot)
+&nbsp; &nbsp; - Python: [Link](https://replicate.com/docs/get-started/discord-bot)\
+&nbsp; &nbsp; - QuizBot using Python: [Link](https://python.plainenglish.io/build-discord-quizbot-with-python-and-deploy-1-44dec1250a37)
 
 ### Code:
 &nbsp; &nbsp; - Directory: [Folder Link](DiscordBotCode)\
