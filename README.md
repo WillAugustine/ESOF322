@@ -40,6 +40,9 @@ September 28, 2022 - Data Models:
 Project Management Software:
 [Jira](https://project-esof322.atlassian.net/jira/software/projects/FP/boards/1)
 
+Proposal:
+[Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/EcoWHBsetlpNsyvNjIlGYKYBHheyjy65EwZ-stQSkSdZ4A?e=FfytJb)
+
 Discord API: [Discord API](https://discord.com/developers/docs/reference)
 
 Discord Server: [Link](https://discord.gg/VWZ2BBW2Ha)
@@ -48,7 +51,8 @@ Discord Developer Portal: [Link](https://discord.com/developers/teams/1029794312
 
 ### Examples:
 &nbsp; &nbsp; - Python: [Link](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)\
-&nbsp; &nbsp; - Python: [Link](https://replicate.com/docs/get-started/discord-bot)
+&nbsp; &nbsp; - Python: [Link](https://replicate.com/docs/get-started/discord-bot)\
+&nbsp; &nbsp; - QuizBot using Python: [Link](https://python.plainenglish.io/build-discord-quizbot-with-python-and-deploy-1-44dec1250a37)
 
 ### Code:
 &nbsp; &nbsp; - Directory: [Folder Link](DiscordBotCode)\
