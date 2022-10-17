@@ -40,6 +40,9 @@ September 28, 2022 - Data Models:
 Project Management Software:
 [Jira](https://project-esof322.atlassian.net/jira/software/projects/FP/boards/1)
 
+Proposal:
+[Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/EcoWHBsetlpNsyvNjIlGYKYBHheyjy65EwZ-stQSkSdZ4A?e=FfytJb)
+
 Discord API: [Discord API](https://discord.com/developers/docs/reference)
 
 Discord Server: [Link](https://discord.gg/VWZ2BBW2Ha)
