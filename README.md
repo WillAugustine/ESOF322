@@ -49,6 +49,8 @@ Discord Server: [Link](https://discord.gg/VWZ2BBW2Ha)
 
 Discord Developer Portal: [Link](https://discord.com/developers/teams/1029794312332001393/information)
 
+Python Trivia API: [Link](https://pypi.org/project/trivia.py/)
+
 ### Examples:
 &nbsp; &nbsp; - Python: [Link](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)\
 &nbsp; &nbsp; - Python: [Link](https://replicate.com/docs/get-started/discord-bot)\
