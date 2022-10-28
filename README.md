@@ -54,8 +54,8 @@ Python Trivia API: [Link](https://pypi.org/project/trivia.py/)
 ### Examples:
 &nbsp; &nbsp; - Python: [Link](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)\
 &nbsp; &nbsp; - Python: [Link](https://replicate.com/docs/get-started/discord-bot)\
-&nbsp; &nbsp; - QuizBot using Python: [Link](https://python.plainenglish.io/build-discord-quizbot-with-python-and-deploy-1-44dec1250a37)
-&nbsp; &nbsp; - Python Music Bot: [Link](https://medium.com/pythonland/build-a-discord-bot-in-python-that-plays-music-and-send-gifs-856385e605a1)
+&nbsp; &nbsp; - QuizBot using Python: [Link](https://python.plainenglish.io/build-discord-quizbot-with-python-and-deploy-1-44dec1250a37)\
+&nbsp; &nbsp; - Python Music Bot: [Link](https://medium.com/pythonland/build-a-discord-bot-in-python-that-plays-music-and-send-gifs-856385e605a1)\
 
 ### Code:
 &nbsp; &nbsp; - Directory: [Folder Link](DiscordBotCode)\
