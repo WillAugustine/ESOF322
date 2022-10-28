@@ -60,6 +60,8 @@ Python Trivia API: [Link](https://pypi.org/project/trivia.py/)
 &nbsp; &nbsp; - Directory: [Folder Link](DiscordBotCode)\
 &nbsp; &nbsp; - LiveShare: [Invite Link](https://prod.liveshare.vsengsaas.visualstudio.com/join?072FF05C9B59DEDED454EAF9360BB99CDB9A)
 
+Test Plan: [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/EbdT2A0YPgRKtcB9GN5LRWQBO2SZUKQMDdEzIpz-aBpViQ?e=XtDHiX)
+
 ## Other
 
 October 5, 2022 - Sequence Diagram:
