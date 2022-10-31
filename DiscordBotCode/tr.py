@@ -2,12 +2,39 @@ from urllib.request import urlopen
 import json
 import random
 
+categories = {
+    "general": 9,
+    "books": 10,
+    "film": 11,
+    "music": 12,
+    "musicals and theatres": 13,
+    "television": 14,
+    "video games": 15,
+    "board games": 16,
+    "science and nature": 17,
+    "computers": 18,
+    "mathematics": 19,
+    "mythology": 20,
+    "sports": 21,
+    "geograpy": 22,
+    "history": 23,
+    "politics": 24,
+    "art": 25,
+    "celebrities": 26,
+    "animals": 27,
+    "vehicles": 28,
+    "comics": 29,
+    "gadgets": 30,
+    "anime and manga": 31,
+    "cartoons and animations": 32
+}
 
 class Trivia:
     # The super cool constructor for the trivia questions.
     # This will set up the trivia stuff.
     # Later, implement some parameters to allow different link generations.
-    def __init__(self):
+    def __init__(self, cat="none", dif="none"):
+        self.url = self.generateLink(cat, dif)
         self.questions = self.loadQuestions()
         self.answers = self.getAnswers()
         self.correctAnswer = self.questions["correct_answer"]
@@ -21,7 +48,17 @@ class Trivia:
     # Description:
     #   Generates a link for opentb's trivia API.
     def generateLink(self, category, difficulty):
-        pass
+        if category in categories:
+            thisCategory = "&category=" + str(categories[category])
+        else:
+            thisCategory = ""
+        if difficulty != "none":
+            thisDifficulty = "&difficulty=" + difficulty
+        else:
+            thisDifficulty = ""
+        genLink = "https://opentdb.com/api.php?amount=1" + thisCategory + thisDifficulty
+        print (genLink)
+        return genLink
 
     # Load Questions
     # Parameters:
@@ -32,7 +69,7 @@ class Trivia:
     # Description:
     #   Uses the Trivia API to fetch a question, and converts it to a dictionary.
     def loadQuestions(self):
-        url = "https://opentdb.com/api.php?amount=1"
+        url = self.url
         page = urlopen(url)
         html_bytes = page.read()
         html = html_bytes.decode("utf-8")
@@ -77,7 +114,7 @@ class Trivia:
             print("Incorrect. The right answer was " + self.questions["correct_answer"])
 
 if __name__ == "__main__":
-    superCoolTrivia = Trivia()
+    superCoolTrivia = Trivia("anime and manga", "easy")
     superCoolTrivia.formatQuestion()
     answerInput = int(input())
     superCoolTrivia.checkAnswer(answerInput)
