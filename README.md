@@ -63,6 +63,8 @@ Python Trivia API: [Link](https://pypi.org/project/trivia.py/)
 
 Test Plan: [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/EbdT2A0YPgRKtcB9GN5LRWQBO2SZUKQMDdEzIpz-aBpViQ?e=XtDHiX)
 
+Presentation: [PowerPoint Link](https://montanatech-my.sharepoint.com/:p:/g/personal/waugustine_mtech_edu/EayjssZHPINNiyKpbFIWbBABCfZgXLv-lKwRz-ty4PkTcQ?e=48zRVe)
+
 ## Other
 
 October 5, 2022 - Sequence Diagram:
