@@ -1,4 +1,3 @@
-import this
 from urllib.request import urlopen
 import json
 import random
@@ -51,6 +50,8 @@ class Trivia:
             answers.append(self.questions["incorrect_answers"][i])
         random.shuffle(answers)
 
+        self.answerNumber = answers.index(self.questions["correct_answer"]) + 1
+
         return answers
 
     # Format Question
@@ -60,7 +61,7 @@ class Trivia:
     def formatQuestion(self):
         print(self.questions["category"])
         print(self.questions["question"])
-        for i in range(4):
+        for i in range(len(self.answers)):
             print(str(i+1) + ": " + self.answers[i])
     
     # Check Answer
@@ -70,8 +71,13 @@ class Trivia:
     # Description:
     #   Checks if the user's given answer is correct.
     def checkAnswer(self, answerNum):
-        pass
+        if answerNum == self.answerNumber:
+            print("You're winner!")
+        else:
+            print("Incorrect. The right answer was " + self.questions["correct_answer"])
 
-
-superCoolTrivia = Trivia()
-superCoolTrivia.formatQuestion()
+if __name__ == "__main__":
+    superCoolTrivia = Trivia()
+    superCoolTrivia.formatQuestion()
+    answerInput = int(input())
+    superCoolTrivia.checkAnswer(answerInput)
