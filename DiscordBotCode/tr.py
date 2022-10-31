@@ -96,10 +96,12 @@ class Trivia:
     #   Prints formatted trivia questions to the console.
     #   In the future, change this to work with the Discord bot's output stuff.
     def formatQuestion(self):
-        print(self.questions["category"])
-        print(self.questions["question"])
+        qArray = []
+        qArray.append(self.questions["category"])
+        qArray.append(self.questions["question"])
         for i in range(len(self.answers)):
-            print(str(i+1) + ": " + self.answers[i])
+            qArray.append(str(i+1) + ": " + self.answers[i])
+        return qArray
     
     # Check Answer
     # Parameters:
@@ -115,6 +117,8 @@ class Trivia:
 
 if __name__ == "__main__":
     superCoolTrivia = Trivia("anime and manga", "easy")
-    superCoolTrivia.formatQuestion()
+    questionList = superCoolTrivia.formatQuestion()
+    for i in range(len(questionList)):
+        print(questionList[i])
     answerInput = int(input())
     superCoolTrivia.checkAnswer(answerInput)
