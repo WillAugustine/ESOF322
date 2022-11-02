@@ -2,38 +2,37 @@ from urllib.request import urlopen
 import json
 import random
 
-categories = {
-    "general": 9,
-    "books": 10,
-    "film": 11,
-    "music": 12,
-    "musicals and theatres": 13,
-    "television": 14,
-    "video games": 15,
-    "board games": 16,
-    "science and nature": 17,
-    "computers": 18,
-    "mathematics": 19,
-    "mythology": 20,
-    "sports": 21,
-    "geograpy": 22,
-    "history": 23,
-    "politics": 24,
-    "art": 25,
-    "celebrities": 26,
-    "animals": 27,
-    "vehicles": 28,
-    "comics": 29,
-    "gadgets": 30,
-    "anime and manga": 31,
-    "cartoons and animations": 32
-}
-
 class Trivia:
     # The super cool constructor for the trivia questions.
     # This will set up the trivia stuff.
     # Later, implement some parameters to allow different link generations.
     def __init__(self, cat="none", dif="none"):
+        self.categories = {
+            "general": 9,
+            "books": 10,
+            "film": 11,
+            "music": 12,
+            "musicals and theatres": 13,
+            "television": 14,
+            "video games": 15,
+            "board games": 16,
+            "science and nature": 17,
+            "computers": 18,
+            "mathematics": 19,
+            "mythology": 20,
+            "sports": 21,
+            "geograpy": 22,
+            "history": 23,
+            "politics": 24,
+            "art": 25,
+            "celebrities": 26,
+            "animals": 27,
+            "vehicles": 28,
+            "comics": 29,
+            "gadgets": 30,
+            "anime and manga": 31,
+            "cartoons and animations": 32
+        }
         self.url = self.generateLink(cat, dif)
         self.questions = self.loadQuestions()
         self.answers = self.getAnswers()
@@ -48,8 +47,8 @@ class Trivia:
     # Description:
     #   Generates a link for opentb's trivia API.
     def generateLink(self, category, difficulty):
-        if category in categories:
-            thisCategory = "&category=" + str(categories[category])
+        if category in self.categories:
+            thisCategory = "&category=" + str(self.categories[category])
         else:
             thisCategory = ""
         if difficulty != "none":
@@ -111,14 +110,37 @@ class Trivia:
     #   Checks if the user's given answer is correct.
     def checkAnswer(self, answerNum):
         if answerNum == self.answerNumber:
-            print("You're winner!")
+            return True
         else:
-            print("Incorrect. The right answer was " + self.questions["correct_answer"])
+            return False
+    
+    # Return Answer
+    # Description:
+    #   Returns the string for the correct answer.
+    #   Use this if someone answers the trivia question incorrectly.
+    def returnAnswer(self):
+        return self.questions["correct_answer"]
+    
+    # Show Categories
+    # Description:
+    #   Returns an array of strings for the valid trivia categories.
+    def showCategories(self):
+        returnCategories = []
+        for keys in self.categories:
+            returnCategories.append(keys)
+        return returnCategories
+    
+    # GetQuestionCount
+    # Description:
+    #   Returns the number of questions.
+    def getQuestionCount(self):
+        return len(self.questions)
 
 if __name__ == "__main__":
     superCoolTrivia = Trivia("anime and manga", "easy")
     questionList = superCoolTrivia.formatQuestion()
-    for i in range(len(questionList)):
-        print(questionList[i])
+    for i in questionList:
+        print (i)
     answerInput = int(input())
     superCoolTrivia.checkAnswer(answerInput)
+    
