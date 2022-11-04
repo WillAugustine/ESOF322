@@ -5,10 +5,10 @@ from dotenv import load_dotenv
 from random import choice
 from discord.ext import commands
 from tr import Trivia
-from help import Trivia as trivia_help
-from help import Poll as poll_help
-from help import NineNine as ninenine_help
-from help import Happy as happy_help
+# from help import Trivia as trivia_help
+# from help import Poll as poll_help
+# from help import NineNine as ninenine_help
+# from help import Happy as happy_help
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -51,8 +51,11 @@ async def create_poll(ctx, question, options, reactions):
     embed.set_footer(text='Poll ID: {}'.format(react_message.id))
     await react_message.edit(embed=embed)
 
-@bot.command(pass_context = True)
-async def poll(ctx, poll_type, question = "help", *options: str):
+@bot.command(pass_context = True, help="Creates a poll of the selected type")
+async def poll(ctx,
+    poll_type: str = commands.parameter(description="The type of poll"),
+    question: str = commands.parameter(description="The question you are asking"),
+    *options: str):
     if poll_type == 'yes no':
         if question == "help":
             await ctx.send("To create a yes/no poll, use the command:\n\
@@ -84,19 +87,33 @@ async def poll(ctx, poll_type, question = "help", *options: str):
             - 'yes no': for a thumbs up or thumbs down poll\n\
             - 'voting': for a 1-10 option poll")
 
+#Trivia Command
 @bot.command(name="trivia")
 async def trivia(ctx, category="none", difficulty="none"):
-    #user = ctx.author
+    user = ctx.author
     responses = ['1️⃣', '2️⃣', '3️⃣', '4️⃣']
     triviaQuestion = Trivia(category, difficulty)
     questionList = triviaQuestion.formatQuestion()
     printMsg = ""
-    for i in range(len(questionList)):
+    for i in range(triviaQuestion.getQuestionCount()):
         printMsg += questionList[i] + '\n'
     triviaMsg = await ctx.send(printMsg)
-    message = await ctx.channel.send(triviaMsg)
-    for j in range(triviaQuestion.getQuestionCount()):
-        await message.add_reaction(responses[j])
+    for j in range(len(responses)):
+        await triviaMsg.add_reaction(responses[j])
+    userResponse = await on_reaction_add(ctx, triviaMsg, user)
+    answeredCorrectly = triviaQuestion.checkAnswer(userResponse)
+    await ctx.send(str(answeredCorrectly))
+
+async def on_reaction_add(ctx, reaction, user):
+    if user == ctx.author:
+        if reaction.emoji == '1️⃣':
+            return 1
+        elif reaction.emoji == '2️⃣':
+            return 2
+        elif reaction.emoji == '3️⃣':
+            return 3
+        elif reaction.emoji == '4️⃣':
+            return 4
 
 # once the bot connects, print that it is connected to the command line
 @bot.event
