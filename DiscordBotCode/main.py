@@ -51,44 +51,42 @@ async def create_poll(ctx, question, options, reactions):
     embed.set_footer(text='Poll ID: {}'.format(react_message.id))
     await react_message.edit(embed=embed)
 
-@bot.command(pass_context = True, help="Creates a poll of the selected type")
-async def poll(ctx,
-    poll_type: str = commands.parameter(description="The type of poll"),
-    question: str = commands.parameter(description="The question you are asking"),
-    *options: str):
-    if poll_type == 'yes no':
-        if question == "help":
-            await ctx.send("To create a yes/no poll, use the command:\n\
-                !poll 'yes no' '<question>'")
-            return
-        options = ["yes", "no"]
-        reactions = ['👍', '👎']
-        await create_poll(ctx, question, options, reactions)
-    if poll_type == 'voting':
-        if question == "help":
-            await ctx.send("To create a voting poll, use the command:\n\
-                !poll voting '<option 1>' '<option 2>' ... '<option 10>'\n\n\
-                You may use anywhere from 1 to 10 options.")
-            return
-        new_options = []
-        for i in range (0, len(options)):
-            new_options.append(options[i])
-        options = new_options
-        reactions = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟']
-        await create_poll(ctx, question, options, reactions)
-    if poll_type == 'rating':
-        options = None
-        reactions = ['😆', '😁', '😀', '🙂', '😐', '😕', '🙁', '😔', '😣', '😫']
-        await create_poll(ctx, question, options, reactions)
-    if poll_type == "help":
-        await ctx.send("The poll command is as follows:\n\
-            !poll '<poll type>' '<poll arguments>'\n\n\
-        The possible poll types are:\n\
-            - 'yes no': for a thumbs up or thumbs down poll\n\
-            - 'voting': for a 1-10 option poll")
+@bot.group(pass_context = True, help="Creates a poll of the selected type")
+async def poll(ctx):
+    if ctx.invoked_subcommand is None:
+        await ctx.send('Invalid poll command passed')
 
+@poll.command(help="Creates a poll with thumbs up and thumbs down as reactions")
+async def yesno(ctx,
+    question: str = commands.parameter(description="The yes/no question you want to be answered")):
+    options = ["yes", "no"]
+    reactions = ['👍', '👎']
+    await create_poll(ctx, question, options, reactions)
+
+@poll.group(help="Creates a poll with numbers 1-10 as reactions")
+async def voting(ctx,
+    question:str = commands.parameter(description="The poll title"),
+    *options:str):# = commands.parameter(description="The different options, sepereated by a spcae, for users to vote on (up to 10)")):
+    new_options = []
+    for i in range (0, len(options)):
+        new_options.append(options[i])
+    options = new_options
+    reactions = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟']
+    await create_poll(ctx, question, options, reactions)
+
+@voting.command(help="The different options, sepereated by a space, for users to vote on (up to 10)")
+async def options(ctx):
+    pass
+
+@poll.command(help="Creates a poll with 10 different emoji emotions as reactions")
+async def rating(ctx,
+    question: str = commands.parameter(description="The question you want people to react to")):
+    options = None
+    reactions = ['😆', '😁', '😀', '🙂', '😐', '😕', '🙁', '😔', '😣', '😫']
+    await create_poll(ctx, question, options, reactions)
+    
 #Trivia Command
-@bot.command(name="trivia")
+@bot.command(name="trivia", help="Generates a trivia question.")
 async def trivia(ctx, category="none", difficulty="none"):
     user = ctx.author
     responses = ['1️⃣', '2️⃣', '3️⃣', '4️⃣']
@@ -100,20 +98,21 @@ async def trivia(ctx, category="none", difficulty="none"):
     triviaMsg = await ctx.send(printMsg)
     for j in range(len(responses)):
         await triviaMsg.add_reaction(responses[j])
-    userResponse = await on_reaction_add(ctx, triviaMsg, user)
+    userResponse = await on_reaction_add(triviaMsg.reactions, user)
     answeredCorrectly = triviaQuestion.checkAnswer(userResponse)
     await ctx.send(str(answeredCorrectly))
 
-async def on_reaction_add(ctx, reaction, user):
-    if user == ctx.author:
-        if reaction.emoji == '1️⃣':
-            return 1
-        elif reaction.emoji == '2️⃣':
-            return 2
-        elif reaction.emoji == '3️⃣':
-            return 3
-        elif reaction.emoji == '4️⃣':
-            return 4
+@bot.event
+async def on_reaction_add(reaction, user):
+    emo = reaction.emoji
+    if emo == '1️⃣':
+        return 1
+    elif emo == '2️⃣':
+        return 2
+    elif emo == '3️⃣':
+        return 3
+    elif emo == '4️⃣':
+        return 4
 
 # once the bot connects, print that it is connected to the command line
 @bot.event
