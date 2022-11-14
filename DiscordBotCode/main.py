@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 from random import choice
 from discord.ext import commands
 from tr import Trivia
+import youtube_dl as YT
+from discord.channel import VoiceChannel
 # from help import Trivia as trivia_help
 # from help import Poll as poll_help
 # from help import NineNine as ninenine_help
@@ -98,6 +100,8 @@ async def trivia(ctx, category="none", difficulty="none"):
     triviaMsg = await ctx.send(printMsg)
     for j in range(len(responses)):
         await triviaMsg.add_reaction(responses[j])
+    
+    await ctx.send(triviaMsg.reactions)
     userResponse = await on_reaction_add(triviaMsg.reactions, user)
     answeredCorrectly = triviaQuestion.checkAnswer(userResponse)
     await ctx.send(str(answeredCorrectly))
@@ -113,11 +117,131 @@ async def on_reaction_add(reaction, user):
         return 3
     elif emo == '4️⃣':
         return 4
+    
+
+YT.utils.bug_reports_message = lambda: ''
+TY_format_options = {
+    'format': 'bestaudio/best',
+    'restrictfilenames': True,
+    'noplaylist': True,
+    'nocheckcertificate': True,
+    'ignoreerrors': False,
+    'logtostderr': False,
+    'quiet': True,
+    'no_warnings': True,
+    'default_search': 'auto',
+    'source_address': '0.0.0.0' # bind to ipv4 since ipv6 addresses cause issues sometimes
+}
+
+ffmpeg_options = {
+    'options': '-vn'
+}
+
+ytdl = YT.YoutubeDL(TY_format_options)
+
+class YTDLSource(discord.PCMVolumeTransformer):
+    def __init__(self, source, *, data, volume=.5):
+        super().__init__(source, volume)
+        self.data = data
+        self.title = data.get('title')
+        self.url = ""
+
+    @classmethod
+    async def from_url(cls, url, *, loop=None, stream=False):
+        loop = loop or asyncio.get_event_loop()
+        data = await loop.run_in_executor(None, lambda: ytdl.extract_info(url, download=not stream))
+        if 'entries' in data:
+            data = data['entries'][0]
+        filename = data['title'] if stream else ytdl.prepare_filename(data)
+        return filename
+
+async def join(ctx, channel: discord.VoiceChannel = None):
+    destination = channel if channel else ctx.author.voice.channel
+    
+    if ctx.voice_client:
+        await ctx.voice_state.voice.move_to(destination)
+        return
+    await destination.connect()
+    await ctx.send(f"The bot joined the voice channel {destination.name}")
+    # if not ctx.message.author.voice:
+    #     await ctx.send("{} is not connected to a voice channel".format(ctx.message.author.name))
+    #     return
+    # else:
+    #     channel = ctx.message.author.voice.channel
+    #     print(f"'{channel}'")
+    #     print(type(channel))
+    # await channel.connect()
+
+async def leave(ctx):
+    voice_client = ctx.message.guild.voice_client
+    if voice_client.is_connected():
+        await voice_client.disconnect()
+    else:
+        await ctx.send("The bot is not connected to a voice channel.")
+
+@bot.group(pass_context = True, help="Plays music in the channel you are in")
+async def music(ctx):
+    if ctx.invoked_subcommand is None:
+        await ctx.send('Invalid poll command passed')
+
+@music.command(name='play_song', help='This command plays the song')
+async def play(ctx,
+    url: str = commands.parameter(description="The YouTube URL you want to play")):
+    await join(ctx, 'music')
+    try :
+        server = ctx.message.guild
+        voice_channel = server.voice_client
+
+        async with ctx.typing():
+            filename = await YTDLSource.from_url(url, loop=bot.loop)
+            voice_channel.play(discord.FFmpegPCMAudio(executable="ffmpeg.exe", source=filename))
+        await ctx.send('**Now playing:** {}'.format(filename))
+    except:
+        await ctx.send("The bot is not connected to a voice channel.")
+
+
+@music.command(name='pause', help='This command pauses the song')
+async def pause(ctx):
+    voice_client = ctx.message.guild.voice_client
+    if voice_client.is_playing():
+        voice_client.pause()
+    else:
+        await ctx.send("The bot is not playing anything at the moment.")
+    
+@music.command(name='resume', help='This command resumes the song')
+async def resume(ctx):
+    voice_client = ctx.message.guild.voice_client
+    if voice_client.is_paused():
+        voice_client.resume()
+    else:
+        await ctx.send("The bot was not playing anything before this. Use play_song command")
+
+@music.command(name='stop', help='The command stops the song and the bot leaves the audio channel')
+async def stop(ctx):
+    voice_client = ctx.message.guild.voice_client
+    if voice_client.is_playing():
+        voice_client.stop()
+    else:
+        await ctx.send("The bot is not playing anything at the moment.")
+    await leave(ctx)
+    
+
+
+
+
+
+
+
+
+
+
+
 
 # once the bot connects, print that it is connected to the command line
 @bot.event
 async def on_ready():
     print(f'\t{bot.user} has connected to Discord!')
+    await bot.change_presence(activity=discord.Game("!help"))
 
 
 bot.run(TOKEN)
