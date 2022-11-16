@@ -88,24 +88,42 @@ async def rating(ctx,
     await create_poll(ctx, question, options, reactions)
     
 #Trivia Command
-@bot.command(name="trivia", help="Generates a trivia question.")
+@bot.command(help="Generates a trivia question. Type \'!trivia categories\' for categories n' stuff.")
 async def trivia(ctx, category="none", difficulty="none"):
-    user = ctx.author
-    responses = ['1️⃣', '2️⃣', '3️⃣', '4️⃣']
-    triviaQuestion = Trivia(category, difficulty)
-    questionList = triviaQuestion.formatQuestion()
-    printMsg = ""
-    for i in range(triviaQuestion.getQuestionCount()):
-        printMsg += questionList[i] + '\n'
-    triviaMsg = await ctx.send(printMsg)
-    for j in range(len(responses)):
-        await triviaMsg.add_reaction(responses[j])
-    
-    await ctx.send(triviaMsg.reactions)
-    userResponse = await on_reaction_add(triviaMsg.reactions, user)
-    answeredCorrectly = triviaQuestion.checkAnswer(userResponse)
-    await ctx.send(str(answeredCorrectly))
-
+    if category == "help":
+        tr = Trivia()
+        printMsg = ""
+        for i in tr.showCategories():
+            printMsg += i + '\n'
+        await ctx.send(printMsg)
+    else:
+        user = ctx.author
+        chnl = ctx.channel
+        #responses = ['1️⃣', '2️⃣', '3️⃣', '4️⃣']
+        triviaQuestion = Trivia(category, difficulty)
+        questionList = triviaQuestion.formatQuestion()
+        printMsg = ""
+        for i in range(triviaQuestion.getQuestionCount()):
+            printMsg += questionList[i] + '\n'
+        triviaMsg = await ctx.send(printMsg)
+        #for j in range(len(responses)):
+        #    await triviaMsg.add_reaction(responses[j])
+        
+        #await ctx.send(triviaMsg.reactions)
+        #userResponse = await on_reaction_add(triviaMsg.reactions, user)
+        userResponse = await bot.wait_for('message')
+        while (userResponse.author != user or userResponse.channel != chnl):
+            userResponse = await bot.wait_for('message')
+            try:
+                n = int(userResponse)
+            except:
+                userResponse = None
+        await ctx.send(f"**{ctx.author}**, you responded with {userResponse.content}!")
+        answeredCorrectly = triviaQuestion.checkAnswer(int(userResponse.content))
+        await ctx.send(str(answeredCorrectly))
+        if (not answeredCorrectly):
+            await ctx.send("The correct answer was " + triviaQuestion.returnAnswer())
+"""
 @bot.event
 async def on_reaction_add(reaction, user):
     emo = reaction.emoji
@@ -117,6 +135,7 @@ async def on_reaction_add(reaction, user):
         return 3
     elif emo == '4️⃣':
         return 4
+"""
     
 
 YT.utils.bug_reports_message = lambda: ''
@@ -155,22 +174,19 @@ class YTDLSource(discord.PCMVolumeTransformer):
         filename = data['title'] if stream else ytdl.prepare_filename(data)
         return filename
 
-async def join(ctx, channel: discord.VoiceChannel = None):
-    destination = channel if channel else ctx.author.voice.channel
+async def join(ctx, desired_channel):
+
+    target_channel = discord.utils.get(ctx.guild.channels, name=desired_channel)
+    channel_id = target_channel.id
+    channel = bot.get_channel(channel_id)
+    print(f"\tLooking for channel '{channel.name}' of type '{channel.type}'")
+    
     
     if ctx.voice_client:
-        await ctx.voice_state.voice.move_to(destination)
+        await ctx.voice_state.voice.move_to(channel)
         return
-    await destination.connect()
-    await ctx.send(f"The bot joined the voice channel {destination.name}")
-    # if not ctx.message.author.voice:
-    #     await ctx.send("{} is not connected to a voice channel".format(ctx.message.author.name))
-    #     return
-    # else:
-    #     channel = ctx.message.author.voice.channel
-    #     print(f"'{channel}'")
-    #     print(type(channel))
-    # await channel.connect()
+    await channel.connect()
+    #await ctx.send(f"The bot joined the voice channel {channel.name}")
 
 async def leave(ctx):
     voice_client = ctx.message.guild.voice_client
@@ -184,19 +200,50 @@ async def music(ctx):
     if ctx.invoked_subcommand is None:
         await ctx.send('Invalid poll command passed')
 
+def formatYoutubeVideo(filename):
+    output = [filename[0], ""]
+    used_dash = False
+    first_string = True
+    for i in range(1, len(filename)):
+        if filename[i].isupper() and not used_dash:
+            output[0] = output[0] + filename[i]
+        elif filename[i] == '-':
+            if not used_dash:
+                used_dash = True
+            else:
+                return output
+        elif filename[i] == '_':
+            if used_dash:
+                output[1] = output[1] + " "
+            else:
+                output[0] = output[0] + " "
+        else:
+            if used_dash:
+                output[1] = output[1] + filename[i]
+            else:
+                output[0] = output[0] + filename[i]
+    return output
+
+    
 @music.command(name='play_song', help='This command plays the song')
 async def play(ctx,
-    url: str = commands.parameter(description="The YouTube URL you want to play")):
-    await join(ctx, 'music')
+    url: str = commands.parameter(description="The YouTube URL you want to play"),
+    channel: str = commands.parameter(description="The channel you want to play music in")):
+    await join(ctx, channel)
     try :
         server = ctx.message.guild
         voice_channel = server.voice_client
-
         async with ctx.typing():
             filename = await YTDLSource.from_url(url, loop=bot.loop)
             voice_channel.play(discord.FFmpegPCMAudio(executable="ffmpeg.exe", source=filename))
-        await ctx.send('**Now playing:** {}'.format(filename))
-    except:
+        formattedFilename = formatYoutubeVideo(filename)
+        title = formattedFilename[1]
+        title = title[1:]
+        artist = formattedFilename[0]
+        artist = artist[:-1]
+        await ctx.send('**Now playing:** *{}* by {} in the *{}* channel'.format(title, artist, channel))
+    except Exception as e:
+        print(str(e))
         await ctx.send("The bot is not connected to a voice channel.")
 
 

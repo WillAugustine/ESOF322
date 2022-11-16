@@ -13,11 +13,11 @@ class Trivia:
             "books": 10,
             "film": 11,
             "music": 12,
-            "musicals and theatres": 13,
+            "musicals": 13,
             "television": 14,
-            "video games": 15,
-            "board games": 16,
-            "science and nature": 17,
+            "videogames": 15,
+            "boardgames": 16,
+            "science": 17,
             "computers": 18,
             "mathematics": 19,
             "mythology": 20,
@@ -31,8 +31,8 @@ class Trivia:
             "vehicles": 28,
             "comics": 29,
             "gadgets": 30,
-            "anime and manga": 31,
-            "cartoons and animations": 32
+            "anime": 31,
+            "cartoons": 32
         }
         self.url = self.generateLink(cat, dif)
         self.questions = self.loadQuestions()
@@ -74,7 +74,8 @@ class Trivia:
         html_bytes = page.read()
         html = html_bytes.decode("utf-8")
         theQuestions = json.loads(html)
-        return theQuestions["results"][0]
+        returnQuestions = theQuestions["results"][0]
+        return returnQuestions
 
     # Get Answers
     # Output:
