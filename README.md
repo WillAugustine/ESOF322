@@ -65,6 +65,26 @@ Test Plan: [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/
 
 Presentation: [PowerPoint Link](https://montanatech-my.sharepoint.com/:p:/g/personal/waugustine_mtech_edu/EayjssZHPINNiyKpbFIWbBABCfZgXLv-lKwRz-ty4PkTcQ?e=48zRVe)
 
+### Final Deliverables
+
+#### Presentation
+- Description
+- What we proposed
+- Timeline
+  - Critique
+- Requirements
+- Diagrams
+- Test Plan / Results
+- Evaluation / Results
+- Project / Process Critique
+- Next Steps
+
+#### Individual Documents
+- Timeline with critique
+- Requirements and specifications
+- Diagrams
+- Test plan with results
+
 ## Other
 
 October 5, 2022 - Sequence Diagram:
