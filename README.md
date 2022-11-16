@@ -79,6 +79,12 @@ Presentation: [PowerPoint Link](https://montanatech-my.sharepoint.com/:p:/g/pers
 - Project / Process Critique
 - Next Steps
 
+#### Individual Documents
+- Timeline with critique
+- Requirements and specifications
+- Diagrams
+- Test plan with results
+
 ## Other
 
 October 5, 2022 - Sequence Diagram:
