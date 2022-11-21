@@ -68,22 +68,22 @@ Presentation: [PowerPoint Link](https://montanatech-my.sharepoint.com/:p:/g/pers
 ### Final Deliverables
 
 #### Presentation
-- Description
-- What we proposed
-- Timeline
-  - Critique
-- Requirements
-- Diagrams
-- Test Plan / Results
-- Evaluation / Results
-- Project / Process Critique
-- Next Steps
+- [x] Description
+- [ ] What we proposed
+- [x] Timeline
+  - [ ] Critique
+- [x] Requirements
+- [ ] Diagrams
+- [ ] Test Plan / Results
+- [ ] Evaluation / Results
+- [ ] Project / Process Critique
+- [ ] Next Steps
 
 #### Individual Documents
-- Timeline with critique
-- Requirements and specifications
-- Diagrams
-- Test plan with results
+- [ ] Timeline with critique
+- [ ] Requirements and specifications
+- [ ] Diagrams
+- [ ] Test plan with results
 
 ## Other
 
