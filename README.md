@@ -65,6 +65,9 @@ Test Plan: [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/
 
 Presentation: [PowerPoint Link](https://montanatech-my.sharepoint.com/:p:/g/personal/waugustine_mtech_edu/EayjssZHPINNiyKpbFIWbBABCfZgXLv-lKwRz-ty4PkTcQ?e=48zRVe)
 
+### Requirements:
+&nbsp; &nbsp; - Requirements Specification Document [Link](https://montanatech-my.sharepoint.com/:w:/g/personal/wfranzen_mtech_edu/EZ0eUkgRG0VKrHx8u_HJ3SwB6ZVoUOE1hmP1HtX-bE8pvg?e=trkaoD)
+
 ### Final Deliverables
 
 #### Presentation
