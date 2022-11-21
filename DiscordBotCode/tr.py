@@ -136,7 +136,10 @@ class Trivia:
     # Description:
     #   Returns the number of questions.
     def getQuestionCount(self):
-        return len(self.questions)
+        if self.questions["type"] == "multiple":
+            return 4
+        else:
+            return 2
 
 if __name__ == "__main__":
     superCoolTrivia = Trivia()

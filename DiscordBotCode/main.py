@@ -7,10 +7,6 @@ from discord.ext import commands
 from tr import Trivia
 import youtube_dl as YT
 from discord.channel import VoiceChannel
-# from help import Trivia as trivia_help
-# from help import Poll as poll_help
-# from help import NineNine as ninenine_help
-# from help import Happy as happy_help
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -33,8 +29,8 @@ async def nine_nine(ctx):
     await ctx.send(response)
 
 # takes input after '!happy' command and spits it out in celebratory message
-@bot.command(name="happy", help='Responds with a celebratory message')
-async def happy_birthday(ctx,*,message):
+@bot.command(name="happy",help='Responds with a celebratory message')
+async def happy_birthday(ctx,*,message:str = commands.parameter(description="The thing you are celebrating")):
     await ctx.send(f'Happy {message}! 🎈🎉')
 
 async def create_poll(ctx, question, options, reactions):
@@ -88,9 +84,12 @@ async def rating(ctx,
     await create_poll(ctx, question, options, reactions)
     
 #Trivia Command
-@bot.command(help="Generates a trivia question. Type \'!trivia categories\' for categories n' stuff.")
-async def trivia(ctx, category="none", difficulty="none"):
-    if category == "help":
+@bot.command(help="Generates a trivia question. Type \'!trivia categories\' for all trivia categories n' stuff.")
+#async def happy_birthday(ctx,*,message:str = commands.parameter(description="The thing you are celebrating")):
+async def trivia(ctx, 
+    category:str=commands.parameter(default="none", description="The category of trivia question you want to answer"),
+    difficulty:str=commands.parameter(description="The difficulty of the question. Either easy, medium, or hard", default="none")):
+    if category == "categories":
         tr = Trivia()
         printMsg = ""
         for i in tr.showCategories():
@@ -99,18 +98,12 @@ async def trivia(ctx, category="none", difficulty="none"):
     else:
         user = ctx.author
         chnl = ctx.channel
-        #responses = ['1️⃣', '2️⃣', '3️⃣', '4️⃣']
         triviaQuestion = Trivia(category, difficulty)
         questionList = triviaQuestion.formatQuestion()
         printMsg = ""
-        for i in range(triviaQuestion.getQuestionCount()):
-            printMsg += questionList[i] + '\n'
+        for i in questionList:
+            printMsg += i + '\n'
         triviaMsg = await ctx.send(printMsg)
-        #for j in range(len(responses)):
-        #    await triviaMsg.add_reaction(responses[j])
-        
-        #await ctx.send(triviaMsg.reactions)
-        #userResponse = await on_reaction_add(triviaMsg.reactions, user)
         userResponse = await bot.wait_for('message')
         while (userResponse.author != user or userResponse.channel != chnl):
             userResponse = await bot.wait_for('message')
@@ -123,19 +116,6 @@ async def trivia(ctx, category="none", difficulty="none"):
         await ctx.send(str(answeredCorrectly))
         if (not answeredCorrectly):
             await ctx.send("The correct answer was " + triviaQuestion.returnAnswer())
-"""
-@bot.event
-async def on_reaction_add(reaction, user):
-    emo = reaction.emoji
-    if emo == '1️⃣':
-        return 1
-    elif emo == '2️⃣':
-        return 2
-    elif emo == '3️⃣':
-        return 3
-    elif emo == '4️⃣':
-        return 4
-"""
     
 
 YT.utils.bug_reports_message = lambda: ''
@@ -247,7 +227,7 @@ async def play(ctx,
         await ctx.send("The bot is not connected to a voice channel.")
 
 
-@music.command(name='pause', help='This command pauses the song')
+@music.command(name='pause', help='This command pauses the currently playing song')
 async def pause(ctx):
     voice_client = ctx.message.guild.voice_client
     if voice_client.is_playing():
@@ -255,7 +235,7 @@ async def pause(ctx):
     else:
         await ctx.send("The bot is not playing anything at the moment.")
     
-@music.command(name='resume', help='This command resumes the song')
+@music.command(name='resume', help='This command resumes the currently paused song')
 async def resume(ctx):
     voice_client = ctx.message.guild.voice_client
     if voice_client.is_paused():
@@ -272,23 +252,10 @@ async def stop(ctx):
         await ctx.send("The bot is not playing anything at the moment.")
     await leave(ctx)
     
-
-
-
-
-
-
-
-
-
-
-
-
 # once the bot connects, print that it is connected to the command line
 @bot.event
 async def on_ready():
     print(f'\t{bot.user} has connected to Discord!')
     await bot.change_presence(activity=discord.Game("!help"))
-
 
 bot.run(TOKEN)
