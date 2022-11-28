@@ -72,7 +72,7 @@ Presentation: [PowerPoint Link](https://montanatech-my.sharepoint.com/:p:/g/pers
 
 #### Presentation
 - [x] Description
-- [ ] What we proposed
+- [x] What we proposed
 - [x] Timeline
   - [ ] Critique
 - [x] Requirements
