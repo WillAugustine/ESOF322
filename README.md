@@ -74,18 +74,18 @@ Presentation: [PowerPoint Link](https://montanatech-my.sharepoint.com/:p:/g/pers
 - [x] Description
 - [x] What we proposed
 - [x] Timeline
-  - [ ] Critique
+  - [x] Critique
 - [x] Requirements
-- [ ] Diagrams
+- [x] Diagrams
 - [ ] Test Plan / Results
 - [ ] Evaluation / Results
 - [ ] Project / Process Critique
-- [ ] Next Steps
+- [x] Next Steps
 
 #### Individual Documents
-- [ ] Timeline with critique
-- [ ] Requirements and specifications
-- [ ] Diagrams
+- [x] Timeline with critique
+- [x] Requirements and specifications
+- [x] Diagrams
 - [ ] Test plan with results
 
 ## Other
