@@ -56,21 +56,28 @@ async def poll(ctx):
 
 @poll.command(help="Creates a poll with thumbs up and thumbs down as reactions")
 async def yesno(ctx,
-    question: str = commands.parameter(description="The yes/no question you want to be answered")):
+    question: str = commands.parameter(description="The yes/no question you want to be answered", default=None)):
     options = ["yes", "no"]
     reactions = ['👍', '👎']
-    await create_poll(ctx, question, options, reactions)
+    if question != None:
+        await create_poll(ctx, question, options, reactions)
+    else: await ctx.send("ERROR: You need to add a question to the end of the '!poll yesno' command!\
+            \n\tTo learn more, use the '!help poll yesno' command")
 
 @poll.group(help="Creates a poll with numbers 1-10 as reactions")
 async def voting(ctx,
-    question:str = commands.parameter(description="The poll title"),
+    question:str = commands.parameter(description="The poll title", default=None),
     *options:str):# = commands.parameter(description="The different options, sepereated by a spcae, for users to vote on (up to 10)")):
     new_options = []
     for i in range (0, len(options)):
         new_options.append(options[i])
     options = new_options
     reactions = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟']
-    await create_poll(ctx, question, options, reactions)
+    if question != None:
+        await create_poll(ctx, question, options, reactions)
+    else:
+        await ctx.send("ERROR: You need to add a question after the '!poll voting' command!\
+            \n\tTo learn more, use the '!help poll voting' command")
 
 @voting.command(help="The different options, sepereated by a space, for users to vote on (up to 10)")
 async def options(ctx):
@@ -78,10 +85,13 @@ async def options(ctx):
 
 @poll.command(help="Creates a poll with 10 different emoji emotions as reactions")
 async def rating(ctx,
-    question: str = commands.parameter(description="The question you want people to react to")):
+    question: str = commands.parameter(description="The question you want people to react to", default=None)):
     options = None
     reactions = ['😆', '😁', '😀', '🙂', '😐', '😕', '🙁', '😔', '😣', '😫']
-    await create_poll(ctx, question, options, reactions)
+    if question != None:
+        await create_poll(ctx, question, options, reactions)
+    else: await ctx.send("ERROR: You need to add a message for users to react to to the end of the '!poll rating' command!\
+            \n\tTo learn more, use the '!help poll rating' command")
     
 #Trivia Command
 @bot.command(help="Generates a trivia question. Type \'!trivia categories\' for all trivia categories n' stuff.")
