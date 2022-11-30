@@ -86,7 +86,8 @@ Presentation: [PowerPoint Link](https://montanatech-my.sharepoint.com/:p:/g/pers
 - [x] Timeline with critique
 - [x] Requirements and specifications
 - [x] Diagrams
-- [ ] Test plan with results
+- [x] Test plan
+  - [ ] With results
 
 ## Other
 
