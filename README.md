@@ -77,8 +77,8 @@ Presentation: [PowerPoint Link](https://montanatech-my.sharepoint.com/:p:/g/pers
   - [x] Critique
 - [x] Requirements
 - [x] Diagrams
-- [ ] Test Plan / Results
-- [ ] Evaluation / Results
+- [x] Test Plan / Results
+- [ ] Evaluation (against requirements) / Results
 - [ ] Project / Process Critique
 - [x] Next Steps
 
