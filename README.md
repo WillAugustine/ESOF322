@@ -84,6 +84,11 @@ Python Trivia API: [Link](https://pypi.org/project/trivia.py/)
 - [x] Project / Process Critique
 - [x] Next Steps
 
+- **Who is presenting what (tentatively):**
+  - **William**: Slides 1 - 10
+  - **Will**: Slides 11 - 20
+  - **Clay**: Slides 21 - 30
+
 #### Individual Documents
 - [x] Timeline with critique
 - [x] Requirements and specifications
