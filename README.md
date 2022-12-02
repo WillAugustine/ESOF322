@@ -70,6 +70,8 @@ Python Trivia API: [Link](https://pypi.org/project/trivia.py/)
 
 ### Final Deliverables
 
+**[Rubric](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/Ea71SFkI0GtHid6Axa7IyWEBoctRNsuMlpTsj1f6Qcl64Q?e=ZfnqLF)**
+
 #### Presentation
 - [x] Description
 - [x] What we proposed
