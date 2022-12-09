@@ -148,4 +148,4 @@ if __name__ == "__main__":
         print (i)
     answerInput = int(input())
     print(superCoolTrivia.checkAnswer(answerInput))
-    
+   
