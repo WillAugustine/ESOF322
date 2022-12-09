@@ -1,0 +1,4 @@
+.env
+*.webm
+*.m4a
+__pycache__

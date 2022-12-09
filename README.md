@@ -61,7 +61,40 @@ Python Trivia API: [Link](https://pypi.org/project/trivia.py/)
 &nbsp; &nbsp; - Directory: [Folder Link](DiscordBotCode)\
 &nbsp; &nbsp; - LiveShare: [Invite Link](https://prod.liveshare.vsengsaas.visualstudio.com/join?072FF05C9B59DEDED454EAF9360BB99CDB9A)
 
-Test Plan: [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/EbdT2A0YPgRKtcB9GN5LRWQBO2SZUKQMDdEzIpz-aBpViQ?e=XtDHiX)
+### Documentation:
+&nbsp; &nbsp; - Test Plan: [Word Doc Link](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/EbdT2A0YPgRKtcB9GN5LRWQBO2SZUKQMDdEzIpz-aBpViQ?e=XtDHiX)\
+&nbsp; &nbsp; - Presentation: [PowerPoint Link](https://montanatech-my.sharepoint.com/:p:/g/personal/waugustine_mtech_edu/EayjssZHPINNiyKpbFIWbBABCfZgXLv-lKwRz-ty4PkTcQ?e=48zRVe)
+
+### Requirements:
+&nbsp; &nbsp; - Requirements Specification Document [Link](https://montanatech-my.sharepoint.com/:w:/g/personal/wfranzen_mtech_edu/EZ0eUkgRG0VKrHx8u_HJ3SwB6ZVoUOE1hmP1HtX-bE8pvg?e=trkaoD)
+
+### Final Deliverables
+
+**[Rubric](https://montanatech-my.sharepoint.com/:w:/g/personal/waugustine_mtech_edu/Ea71SFkI0GtHid6Axa7IyWEBoctRNsuMlpTsj1f6Qcl64Q?e=ZfnqLF)**
+
+#### Presentation
+- [x] Description
+- [x] What we proposed
+- [x] Timeline
+  - [x] Critique
+- [x] Requirements
+- [x] Diagrams
+- [x] Test Plan / Results
+- [x] Evaluation (against requirements) / Results
+- [x] Project / Process Critique
+- [x] Next Steps
+
+##### **Who is presenting what (tentatively):**
+  - **William**: Slides 1 - 10
+  - **Will**: Slides 11 - 20
+  - **Clay**: Slides 21 - 30
+
+#### Individual Documents
+- [x] Timeline with critique
+- [x] Requirements and specifications
+- [x] Diagrams
+- [x] Test plan
+  - [ ] With results
 
 ## Other
 
